@@ -2,11 +2,11 @@
 
 // Imports dependencies and set up http server
 const
-	express = require('express'),
-	bodyParser = require('body-parser'),
-	app = express().use(bodyParser.json()); // create express http server
+  express = require('express'),
+  bodyParser = require('body-parser'),
+  app = express().use(bodyParser.json()); // creates express http server
 
-// Set server port and logs message on success
+// Sets server port and logs message on success
 app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
 
 // Creates the endpoint for our webhook 
@@ -39,7 +39,7 @@ app.post('/webhook', (req, res) => {
 app.get('/webhook', (req, res) => {
 
   // Your verify token. Should be a random string.
-  let VERIFY_TOKEN = "uubcjhvennddvfrcnlejebvehhkfuhdh"
+  let VERIFY_TOKEN = "furncyn-messenger-webhook-token"
     
   // Parse the query params
   let mode = req.query['hub.mode'];
